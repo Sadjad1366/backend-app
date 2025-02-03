@@ -11,14 +11,10 @@ const apiRouter = require('./routers/api-router');
 const app = express();
 
 
-
 app.use(cors({
-  origin: "https://maktab118-project-sadjad-ghasemi.vercel.app", // دامنه‌ی فرانت‌اند در Vercel
-  credentials: true, // ⬅ ضروری برای احراز هویت
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  allowedHeaders: ["Content-Type", "Authorization"], // ⬅ مجاز کردن `headers`
-}));
-
+	origin: "https://maktab118-project-sadjad-ghasemi.vercel.app", // دامنه فرانت‌اند در Vercel
+	credentials: true, // برای ارسال کوکی‌ها ضروری است
+    }));
 
 // database Connection
 connectToDatabase().then(() => addAdmin());
