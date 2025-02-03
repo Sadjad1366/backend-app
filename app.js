@@ -12,8 +12,9 @@ const app = express();
 
 
 app.use(cors({
-	origin : '*'
-}))
+	origin: "https://maktab118-project-sadjad-ghasemi.vercel.app", // دامنه فرانت‌اند در Vercel
+	credentials: true, // برای ارسال کوکی‌ها ضروری است
+    }));
 
 // database Connection
 connectToDatabase().then(() => addAdmin());
